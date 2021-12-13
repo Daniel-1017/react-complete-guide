@@ -1,0 +1,3 @@
+Inline styles isn't always a good idea because they take a very high priotity.
+
+Styled components => https://styled-components.com/
