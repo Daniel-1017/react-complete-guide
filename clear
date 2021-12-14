@@ -1,0 +1,23 @@
+[33mcommit f1661662be59e4bde068ef4543a5cb17482b5aa8[m[33m ([m[1;36mHEAD -> [m[1;32m11-food-order-app[m[33m, [m[1;31morigin/11-food-order-app[m[33m)[m
+Author: Frimu Daniel <frimudaniel17@gmail.com>
+Date:   Tue Dec 14 17:57:49 2021 +0100
+
+    133
+
+[33mcommit 4b885ba4bd644128c38ba65155ea19917fccd5f8[m
+Author: Frimu Daniel <frimudaniel17@gmail.com>
+Date:   Mon Dec 13 19:26:42 2021 +0100
+
+    first commit
+
+[33mcommit 409ee0af9940116fd189e058ca52a1cd977de095[m
+Author: Frimu Daniel <frimudaniel17@gmail.com>
+Date:   Mon Dec 13 18:56:50 2021 +0100
+
+    first commit
+
+[33mcommit f9fd382607d3b47814ee5242cd33b8fe7285fb27[m
+Author: Frimu Daniel <frimudaniel17@gmail.com>
+Date:   Mon Dec 13 18:41:10 2021 +0100
+
+    Initialize project using Create React App
