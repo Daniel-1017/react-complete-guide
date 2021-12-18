@@ -8,7 +8,8 @@ import CartContext from "../../store/cart-context";
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
 
-  const totalAmount = `$${cartCtx.totalAmoutn.toFixed(2)}`;
+  const totalAmount =
+    cartCtx.totalAmoutn !== undefined && `$${cartCtx.totalAmoutn.toFixed(2)}`;
   const hasItems = cartCtx.items.length > 0;
 
   const cartItems = (
