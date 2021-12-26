@@ -4,12 +4,18 @@ const SimpleInput = (props) => {
   const [enteredName, setEnteredName] = useState("");
   const [enteredNameTouched, setEnteredNameTouched] = useState(false);
 
+  const [enteredEmail, setEnteredEmail] = useState("");
+  const [enteredEmailTouched, setEnteredEmailTouched] = useState(false);
+
   const enteredNameIsValid = enteredName.trim() !== "";
   const nameInputIsInvalid = !enteredNameIsValid && enteredNameTouched;
 
+  const eneredEmailIsValid = enteredEmail.includes("@");
+  const eneredEmailIsInvalid = !eneredEmailIsValid && enteredEmailTouched;
+
   let formIsValid = false;
 
-  if (enteredNameIsValid) {
+  if (enteredNameIsValid && eneredEmailIsValid) {
     formIsValid = true;
   }
 
@@ -17,8 +23,16 @@ const SimpleInput = (props) => {
     setEnteredName(e.target.value);
   }
 
+  function emailInputChangeHandler(e) {
+    setEnteredEmail(e.target.value);
+  }
+
   function nameInputBlurHandler(e) {
     setEnteredNameTouched(true);
+  }
+
+  function emailInputBlurHandler(e) {
+    setEnteredEmailTouched(true);
   }
 
   function formSubmissionHandler(e) {
@@ -34,9 +48,16 @@ const SimpleInput = (props) => {
 
     setEnteredName("");
     setEnteredNameTouched(false);
+
+    setEnteredEmail("");
+    setEnteredEmailTouched(false);
   }
 
   const nameInputClasses = nameInputIsInvalid
+    ? "form-control invalid"
+    : "form-control";
+
+  const emailInputClasses = eneredEmailIsInvalid
     ? "form-control invalid"
     : "form-control";
 
@@ -53,6 +74,20 @@ const SimpleInput = (props) => {
         />
         {nameInputIsInvalid && (
           <p className="error-text">Name must not be empty</p>
+        )}
+      </div>
+
+      <div className={emailInputClasses}>
+        <label htmlFor="email">Your E-mail</label>
+        <input
+          type="email"
+          id="email"
+          value={enteredEmail}
+          onBlur={emailInputBlurHandler}
+          onChange={emailInputChangeHandler}
+        />
+        {nameInputIsInvalid && (
+          <p className="error-text">Please enter a valid email</p>
         )}
       </div>
       <div className="form-actions">
