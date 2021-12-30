@@ -25,7 +25,7 @@ const initialAuthState = { isAuth: false };
 
 const authSlice = createSlice({
   name: "auth",
-  initialAuthState,
+  initialState: initialAuthState,
   reducers: {
     login(state) {
       state.isAuth = true;
@@ -39,7 +39,7 @@ const authSlice = createSlice({
 const store = configureStore({
   reducer: {
     counter: counterSlice.reducer,
-    // auth: authSlice.reducer,
+    auth: authSlice.reducer,
   },
 });
 
